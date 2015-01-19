@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='shortly'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Shortly</title>
+    <link rel="stylesheet" href="vendor/materialize/dist/css/materialize.css">
+    <link rel="stylesheet" href="lib/flexboxgrid/dist/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body class="blue-grey darken-4">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="navbar-wrapper">
+          <a ui-sref="links" class="brand-logo">Shortly</a>
+        </div>
+        <ul class="right side-nav">
+          <li ui-sref-active="active">
+            <a ui-sref="links" >Links</a>
+          </li>
+
+          <li ui-sref-active="active">
+            <a ui-sref="shorten" >Shorten</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main ui-view fx-animate></main>
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/materialize/dist/js/materialize.js"></script>
+    <script src="lib/ngFx/dist/ngFx.min.js"></script>
+    <script src="app/auth/auth.js"></script>
+    <script src="app/links/links.js"></script>
+    <script src="app/shorten/shorten.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>
