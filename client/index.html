@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html ng-app='shortly'>
+<html ng-app='flow'>
   <head>
     <meta charset="utf-8" />
-    <title>Shortly</title>
+    <title>| Welcome to Flow |</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <h1>Shortly</h1>
-
+    <h1>Flow</h1>
+    <h2>Nurture Your Creativity through Daily Reflection</h2>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <!-- Adding the ng-app declaration to initialize AngularJS -->
+    <div id="main" ng-app>
+      <!-- The navigation menu will get the value of the "active" variable as a class.
+         The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+      <nav class="{{active}}" ng-click="$event.preventDefault()">
+
+        <!-- When a link in the menu is clicked, we set the active variable -->
+
+        <a href="#" class="write" ng-click="active='write'">Write</a>
+        <a href="#" class="explore" ng-click="active='explore'">Explore</a>
+        <a href="#" class="others" ng-click="active='others'">Others</a>
+        <a href="#" class="logout" ng-click="active='logout'">Logout</a>
+      </nav>
+
+
+    </div>
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>
