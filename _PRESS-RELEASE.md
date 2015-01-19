@@ -18,28 +18,38 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-Flow
+    Flow  
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+    Flow helps anybody who would like to become more creative and productive, to increase their likelihood of generating breakthrough ideas. 
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+    Wouldn't you like to become more creative so that you can come up with better ideas in your everyday life? Creativity is tied to our ability to tap into our mental pool of resources — the knowledge, insight, information, and inspiration we’ve accumulated over the years, and combine them in new ways. Creativity is also tied to our ability to cross-pollinate ideas from a wealth of disciplines. 
+
+    Our online journaling product, Flow, is a great way to keep track of your mental pool of resources. It can help you learn things about yourself, and help you see patterns in your own reactions and behaviors. Flow helps users begin each morning with a page of stream-of-consciousness writing to clear away the mental clutter and get their creative juices flowing. To support users in their writing, Flow inspires users with high-quality content from around the web. Flow also helps users maintain a consistent journaling practice. 
 
 ## Problem ##
   > Describe the problem your product solves.
+    Although journaling has been shown to improve creativity and productivity, many people find it difficult to maintain a consistent journaling practice, or they don't know what to write about. 
+
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+    Flow, is a great way to keep track of your mental pool of resources that you've collected over the years. It can help you learn things about yourself, and help you see patterns in your own reactions and behaviors. Flow helps users begin each morning with a page of stream-of-consciousness writing to clear away the mental clutter and get their creative juices flowing. To support users in their writing, Flow inspires users with high-quality content from around the web. Flow also helps users maintain a consistent journaling practice. 
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  'Flow is going to help people derive creative insights and generate breakthrough ideas in their everyday lives.'  
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  Just visit www.flow.com and sign up for an account!
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  'Thanks to Flow, I've been able to overcome writer's block. My head is bustling with insights every morning. I feel more alive and awake to the world.'  
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
