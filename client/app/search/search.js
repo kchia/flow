@@ -4,10 +4,10 @@ angular.module('flow.search', [])
   $scope.data = {
     entries: []
   };
-
+  
   // Grab entries from server
-  $scope.getEntries = function(){
-    Entries.getEntries()
+  $scope.getEntries = function(query){
+    Entries.getEntries(query)
       .then(function(resp){
         // console.log(resp);
         $scope.data.entries = resp;

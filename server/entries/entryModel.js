@@ -8,4 +8,9 @@ var EntrySchema = new mongoose.Schema({
   title: String,
 });
 
+EntrySchema.pre('save', function(next) {
+  this.date = new Date();
+  next();
+});
+
 module.exports = mongoose.model('Entry', EntrySchema);

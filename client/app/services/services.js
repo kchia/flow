@@ -1,10 +1,13 @@
 angular.module('flow.services', [])
 
 .factory('Entries', function ($http) {
-  var getEntries = function(){
+  var getEntries = function(query){
     return $http({
       method: 'GET',
-      url: '/api/entries'
+      url: '/api/entries',
+      data: {
+        text: { $regex: /query/}
+      }
     })
     .then(function (resp) {
       return resp.data;

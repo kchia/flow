@@ -1,7 +1,7 @@
 <!-- <div id="search" ng-controller="SearchController"> -->
 <div id="search">
   <h1>Search Your Memories</h1>
-  <form name="searchForm" ng-submit='getEntries()'>
+  <form name="searchForm" ng-submit='getEntries(search)'>
     <input type="text" name="search" style="width: 200px; height:20px" placeholder="please enter a keyword" ng-model='search'>
     <br>
     <br>
@@ -13,7 +13,7 @@
   <div class='entry' ng-repeat='entry in data.entries | filter:search'>
     <!-- <img src='/assets/redirect_icon.png'/> -->
     <!-- <div class='userid'>{{entry.userid}}</div> -->
-    <div class='title' style="font-style:bold;">Entry Title: {{entry.title}}</div>
+    <div class='title'>Entry Title: {{entry.title}}</div>
     <div class='date'>Date Created: {{entry.date}}</div>
     <div class='text'>{{entry.text}}</div>
     <br>
