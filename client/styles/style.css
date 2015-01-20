@@ -93,3 +93,12 @@ p b{
   text-transform:uppercase;
   font-size:18px;
 }
+
+input {
+  text-align: top;
+}
+
+button {
+  font-size: 15px;
+
+}

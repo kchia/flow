@@ -1,16 +1,34 @@
-angular.module('shortly.services', [])
+angular.module('flow.services', [])
 
-.factory('Links', function ($http) {
-  // Your code here
+.factory('Entries', function ($http) {
+  var getEntries = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/entries'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  var addEntry = function (entry) {
+    return $http({
+      method: 'POST',
+      url: '/api/entries',
+      data: entry
+    })
+    .then(function (resp) {
+      return resp;
+    });
+  };
+
+  return {
+    getEntries: getEntries,
+    addEntry: addEntry
+  };
+
 })
 .factory('Auth', function ($http, $location, $window) {
-  // Don't touch this Auth service!!!
-  // it is responsible for authenticating our user
-  // by exchanging the user's username and password
-  // for a JWT from the server
-  // that JWT is then stored in localStorage as 'com.shortly'
-  // after you signin/signup open devtools, click resources,
-  // then localStorage and you'll see your token from the server
   var signin = function (user) {
     return $http({
       method: 'POST',
@@ -34,11 +52,11 @@ angular.module('shortly.services', [])
   };
 
   var isAuth = function () {
-    return !!$window.localStorage.getItem('com.shortly');
+    return !!$window.localStorage.getItem('com.flow');
   };
 
   var signout = function () {
-    $window.localStorage.removeItem('com.shortly');
+    $window.localStorage.removeItem('com.flow');
     $location.path('/signin');
   };
 
