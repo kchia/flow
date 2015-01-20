@@ -4,11 +4,13 @@
   <h1>write!</h1>
   <form name="entryForm" ng-submit='addEntry()'>
     <b>Title<b><br>
-    <input type="text" name="title" style="width: 700px; height:20px" ng-model='entry.title'>
+    <!-- <input type="text" name="title" style="width: 700px; height:20px" ng-model='entry.title'> -->
+    <textarea rows="1" cols="84" ng-model='entry.title' style="font-size:16px"></textarea>
     <br>
     <br>
     Write Something Memorable Here! <br>
-    <input type="text" name="text" style="width: 700px; height:300px" ng-model='entry.text'>
+    <!-- <input type="text" name="text" style="width: 700px; height:300px" ng-model='entry.text'> -->
+    <textarea rows="30" cols="98" ng-model='entry.text' style="font-size:14px"></textarea>
     <br>
     <br>
     <button>save   </button>

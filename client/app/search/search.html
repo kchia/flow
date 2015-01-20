@@ -10,7 +10,7 @@
   <br>
   <br>
   <br>
-  <div class='entry' ng-repeat='entry in data.entries | orderBy:entry.date | filter:search'>
+  <div class='entry' ng-repeat='entry in data.entries.slice().reverse() | filter:search'>
     <!-- <img src='/assets/redirect_icon.png'/> -->
     <!-- <div class='userid'>{{entry.userid}}</div> -->
     <div class='title'>Entry Title: {{entry.title}}</div>
