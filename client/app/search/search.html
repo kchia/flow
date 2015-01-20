@@ -3,14 +3,14 @@
   <h1>Search Your Memories</h1>
   <form name="searchForm" ng-submit='getEntries(search)'>
     <input type="text" name="search" style="width: 200px; height:20px" placeholder="please enter a keyword" ng-model='search'>
-    <br>
-    <br>
-    <button>search my journal</button>
+    <button>search my journal   </button>
   </form>
+    <br>
+    <button ng-click='clearAll()'>clear all</button>
   <br>
   <br>
   <br>
-  <div class='entry' ng-repeat='entry in data.entries | filter:search'>
+  <div class='entry' ng-repeat='entry in data.entries | orderBy:entry.date | filter:search'>
     <!-- <img src='/assets/redirect_icon.png'/> -->
     <!-- <div class='userid'>{{entry.userid}}</div> -->
     <div class='title'>Entry Title: {{entry.title}}</div>

@@ -14,6 +14,19 @@ angular.module('flow.services', [])
     });
   };
 
+  var countEntries = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/entries',
+      data: {
+        userid: { $regex: /query/}
+      }
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   var addEntry = function (entry) {
     return $http({
       method: 'POST',
@@ -27,6 +40,7 @@ angular.module('flow.services', [])
 
   return {
     getEntries: getEntries,
+    countEntries: countEntries,
     addEntry: addEntry
   };
 
@@ -39,6 +53,7 @@ angular.module('flow.services', [])
       data: user
     })
     .then(function (resp) {
+      console.log(resp.data.error);
       return resp.data.token;
     });
   };

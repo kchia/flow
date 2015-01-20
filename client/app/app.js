@@ -28,6 +28,10 @@ angular.module('flow', [
       templateUrl: 'app/calendar/calendar.html',
       controller: 'CalendarController'
     })
+    .when('/logout', {
+      templateUrl: 'app/auth/signin.html',
+      controller: 'AuthController'
+    })
     .otherwise({
       redirectTo: '/signin'
     });

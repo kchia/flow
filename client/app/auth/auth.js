@@ -21,10 +21,15 @@ angular.module('flow.auth', [])
     Auth.signup($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.flow', token);
-        $location.path('/write');
+        $location.path('/signin');
       })
       .catch(function (error) {
         console.error(error);
       });
+  };
+
+  $scope.logout = function () {
+    $location.path('/signin');
+    $window.localStorage.setItem('com.flow', '');
   };
 });

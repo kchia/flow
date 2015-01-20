@@ -21,6 +21,26 @@ module.exports = function (app, express) {
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
 
+  app.get('/',
+    function(req, res) {
+    sess = req.session;
+    if (!sess.username){
+      res.redirect('/login');
+    }
+    res.render('index');
+
+  });
+
+  app.get('/logout', function(req,res){
+    req.session.destroy(function(err){
+      if(err){
+        console.log(err);
+      } else {
+        res.redirect('/');
+      }
+    });
+  });
+
   // inject our routers into their respective route files
   require('../users/userRoutes.js')(userRouter);
   require('../entries/entryRoutes.js')(entryRouter);

@@ -5,7 +5,7 @@
     <title>| Flow |</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
-  <body ng-controller="AuthController">
+  <body>
     <h1>Welcome to Flow</h1>
     <h2> “Journal writing is a voyage to the interior.” </h2>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
@@ -14,12 +14,12 @@
       <!-- The navigation menu will get the value of the "active" variable as a class.
          The $event.preventDefault() stops the page from jumping when a link is clicked. -->
 
-      <nav class="navigation">
+      <nav class="navigation" ng-controller="AuthController">
 
         <a href="/#/write" class="write">Write</a>
         <a href="/#/search" class="search">Search</a>
-        <a href="/#/calendar" class="calendar">Calendar</a>
-        <a href="/#/signin" class="logout">Logout</a>
+        <a href="/#/calendar" class="calendar">Journaling Stats</a>
+        <a href="/#/logout" class="logout" ng-click="logout()">Logout</a>
       </nav>
 
     </div>

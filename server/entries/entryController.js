@@ -8,9 +8,10 @@ module.exports = {
     var title = req.body.title;
     var text = req.body.text;
     var userid = req.user._id;
+    var username = req.user.username;
 
     var createEntry = Q.nbind(Entry.create, Entry);
-    createEntry({ title: title, text: text, userid: userid})
+    createEntry({ title: title, text: text, userid: userid, username: username})
       .then(function(createdEntry){
         if (createdEntry) {
           res.json(createdEntry);
@@ -34,6 +35,19 @@ module.exports = {
         next(error);
       });
   },
+
+  countEntries: function (req, res, next) {
+    var userid = req.user._id;
+    var countAll = Q.nbind(Entry.count, Entry);
+
+    countAll({userid: userid})
+      .then(function (count) {
+        res.json(count);
+      })
+      .fail(function (error) {
+        next(error);
+      });
+  },  
   // findEntries: function(req, res, next){
   //   var findEntry = Q.nbind(Entry.findOne, Entry);
   //   findEntry({title: title})

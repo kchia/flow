@@ -16,4 +16,9 @@ angular.module('flow.search', [])
         console.error(error);
       });
   };
+
+  $scope.clearAll = function(){
+    $scope.data.entries= [];
+  };
+
 });
