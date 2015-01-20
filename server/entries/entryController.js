@@ -22,22 +22,34 @@ module.exports = {
 
   },
 
-  findEntries: function(req, res, next){
-    var findEntry = Q.nbind(Entry.findOne, Entry);
-    findEntry({title: title})
-      .then(function (entry) {
-        if (entry) {
-          res.json(entry);
-          next();
-        } else {
-          next(new Error('Entry not found'));
-        }
+  allEntries: function (req, res, next) {
+    var userid = req.user._id;
+    var findAll = Q.nbind(Entry.find, Entry);
+
+    findAll({userid: userid})
+      .then(function (entries) {
+        res.json(entries);
       })
       .fail(function (error) {
         next(error);
       });
-
   },
+  // findEntries: function(req, res, next){
+  //   var findEntry = Q.nbind(Entry.findOne, Entry);
+  //   findEntry({title: title})
+  //     .then(function (entry) {
+  //       if (entry) {
+  //         res.json(entry);
+  //         next();
+  //       } else {
+  //         next(new Error('Entry not found'));
+  //       }
+  //     })
+  //     .fail(function (error) {
+  //       next(error);
+  //     });
+
+  // },
   // findUrl: function (req, res, next, code) {
   //   var findLink = Q.nbind(Link.findOne, Link);
   //   findLink({code: code})
@@ -54,17 +66,6 @@ module.exports = {
   //     });
   // },
 
-  // allLinks: function (req, res, next) {
-  // var findAll = Q.nbind(Link.find, Link);
-
-  // findAll({})
-  //   .then(function (links) {
-  //     res.json(links);
-  //   })
-  //   .fail(function (error) {
-  //     next(error);
-  //   });
-  // },
 
 
   // navToLink: function (req, res, next) {
