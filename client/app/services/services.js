@@ -18,9 +18,6 @@ angular.module('flow.services', [])
     return $http({
       method: 'GET',
       url: '/api/entries',
-      data: {
-        userid: { $regex: /query/}
-      }
     })
     .then(function (resp) {
       return resp.data;
@@ -53,7 +50,6 @@ angular.module('flow.services', [])
       data: user
     })
     .then(function (resp) {
-      console.log(resp.data.error);
       return resp.data.token;
     });
   };
@@ -78,11 +74,22 @@ angular.module('flow.services', [])
     $location.path('/signin');
   };
 
+  var countUsers = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/users/count'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  }
+
 
   return {
     signin: signin,
     signup: signup,
     isAuth: isAuth,
-    signout: signout
+    signout: signout,
+    countUsers: countUsers
   };
 });

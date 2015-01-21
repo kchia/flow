@@ -32,4 +32,6 @@ angular.module('flow.auth', [])
     $location.path('/signin');
     $window.localStorage.setItem('com.flow', '');
   };
+
+  $scope.countUsers();
 });

@@ -10,12 +10,13 @@
   <br>
   <br>
   <br>
-  <div class='entry' ng-repeat='entry in data.entries.slice().reverse() | filter:search'>
+  <div class='entry' style='width:600px;margin:0px auto;border:1px solid;border-radius:15px;margin-bottom:20px;padding:10px 10px; ' ng-repeat='entry in data.entries.slice().reverse() | filter:search'>
     <!-- <img src='/assets/redirect_icon.png'/> -->
     <!-- <div class='userid'>{{entry.userid}}</div> -->
-    <div class='title'>Entry Title: {{entry.title}}</div>
-    <div class='date'>Date Created: {{entry.date}}</div>
-    <div class='text'>{{entry.text}}</div>
+    <div class='title' style='font-weight:bold;'>Title: {{entry.title}}</div>
+    <div class='date' style='font-style:italic;'>Date Created: {{entry.date}}</div>
+    <br>
+    <div class='text'style='text-align:left;'>{{entry.text}}</div>
     <br>
     <br>
   </div>

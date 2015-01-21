@@ -85,5 +85,22 @@ module.exports = {
           next(error);
         });
     }
+  },
+
+  countUsers: function(req, res, next){
+
+    var findUsers = Q.nbind(User.find, User);
+
+    findUsers()
+      .then(function (users) {
+        if (!users) {
+          next(new Error('Users dont exist'));
+        } else {
+          return users;
+        }
+      })
+      .fail(function (error) {
+        next(error);
+      });
   }
 };
