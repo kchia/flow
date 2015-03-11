@@ -33,5 +33,5 @@ angular.module('flow.auth', [])
     $window.localStorage.setItem('com.flow', '');
   };
 
-  $scope.countUsers();
+  // $scope.countUsers();
 });

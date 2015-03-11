@@ -40,21 +40,21 @@ angular.module('flow', [
 })
 .controller('MainController',function($scope, Auth){
   $scope.date = new Date();
-  $scope.usersNum = 0;
+  // $scope.usersNum = 0;
 
-  $scope.countUsers = function(){
-    Auth.countUsers()
-      .then(function(resp){
-         $scope.data.usersNum = resp.length;
-      })
-       .catch(function (error) {
-         console.error(error);
-       });     
-  };
+  // $scope.countUsers = function(){
+  //   Auth.countUsers()
+  //     .then(function(resp){
+  //        $scope.data.usersNum = resp.length;
+  //     })
+  //      .catch(function (error) {
+  //        console.error(error);
+  //      });     
+  // };
 
-  $scope.init = function(){
-    $scope.countUsers();
-  };
+  // $scope.init = function(){
+  //   $scope.countUsers();
+  // };
 })
 .factory('AttachTokens', function ($window) {
   var attach = {
