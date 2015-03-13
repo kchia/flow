@@ -1,6 +1,6 @@
 # FLOW
 
-Flow is a journaling tool that allows you to write and record your thoughts securely. To run Flow on your local computer:
+Flow is a journaling tool that allows you to write and record your thoughts privately. To run Flow on your local computer:
 
 
 1. Run `npm install` to install all node dependencies (listed in the package.json)
